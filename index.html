@@ -1,119 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CtrlYou – Stop Scrolling. Start Growing.</title>
-  <link rel="icon" type="image/png" href="logo.png" />
-   <!-- Google tag (gtag.js) -->
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBM9XJ05XD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-EBM9XJ05XD');
   </script>
-  
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <!-- Meta Tags for SEO -->
+  <meta name="description" content="CtrlYou – A gamified growth platform to replace reels & betting with real skills and real rewards." />
+  <meta name="keywords" content="CtrlYou, self improvement, stop scrolling, grow fast, productivity, earn rewards, dream11 alternative" />
+  <meta name="author" content="CtrlYou Team" />
+
+  <!-- Social Preview -->
+  <meta property="og:title" content="CtrlYou – Stop Scrolling. Start Growing." />
+  <meta property="og:description" content="Join a gamified self-growth journey that rewards you for improving your life." />
+  <meta property="og:image" content="logo.png" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Smooth Scroll + Styling -->
   <style>
-    body {
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #0f0f0f;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #0e1012;
       color: #ffffff;
-    }
-    header {
-      background: linear-gradient(135deg, #1e1e2f, #2b2b44);
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 2rem;
     }
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
+
+    header {
+      margin-bottom: 2rem;
+      animation: fadeIn 1.5s ease-in-out;
     }
-    header p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
+
+    img {
+      height: 60px;
+      margin-bottom: 1rem;
     }
-    .cta-button {
-      background-color: #00c896;
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
       color: #fff;
-      border: none;
-      padding: 15px 30px;
-      font-size: 1em;
+    }
+
+    p.tagline {
+      font-size: 1.2rem;
+      color: #aaa;
+      margin-bottom: 1.5rem;
+    }
+
+    .typewriter {
+      display: inline-block;
+      overflow: hidden;
+      border-right: .15em solid orange;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .1em;
+      animation: typing 2s steps(30, end), blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: orange; }
+    }
+
+    .cta {
+      background-color: #5e17eb;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
       border-radius: 8px;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 0px rgba(94, 23, 235, 0.6);
     }
-    .cta-button:hover {
-      background-color: #00b084;
+
+    .cta:hover {
+      background-color: #3e0dc9;
+      box-shadow: 0 0 15px rgba(94, 23, 235, 0.7);
+      transform: translateY(-2px);
     }
-    section {
-      padding: 60px 20px;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
+
+    .form-container {
+      margin-top: 3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeIn 1.2s ease-in-out;
     }
-    .features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      margin-top: 30px;
-    }
-    .feature {
-      background: #1a1a2e;
-      padding: 20px;
-      border-radius: 12px;
-    }
+
     iframe {
-      margin-top: 40px;
-      border: none;
       width: 100%;
-      height: 700px;
+      height: 600px;
+      border: none;
       border-radius: 12px;
     }
+
     footer {
-      text-align: center;
-      font-size: 0.9em;
-      color: #888;
-      padding: 20px;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #666;
     }
-    @media (max-width: 600px) {
-      .features {
-        grid-template-columns: 1fr;
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>⚡ CtrlYou – Stop Scrolling. Start Growing.</h1>
-    <p>Reels. Dream11. Doomscrolling. We’ve all been there.<br>CtrlYou helps you break the loop and build the life you want — one 5-minute challenge at a time.</p>
-    <a href="#waitlist" class="cta-button">🚀 Join the Waitlist</a>
+    <img src="logo.png" alt="CtrlYou Logo" />
+    <h1>🔥 CtrlYou</h1>
+    <p class="tagline"><span class="typewriter">✋ Stop Scrolling. ⚡ Start Growing. 💰 Earn Rewards.</span></p>
+    <a href="#waitlist" class="cta">Join the Waitlist</a>
   </header>
 
-  <section>
-    <h2>😵‍💫 The Problem</h2>
-    <p>You're stuck in scroll loops, betting apps, and burnout. No growth. No gains.</p>
-
-    <h2>💡 The CtrlYou Solution</h2>
-    <p>A daily dopamine-packed challenge to:</p>
-    <div class="features">
-      <div class="feature">✅ Learn real skills</div>
-      <div class="feature">🎯 Replace noise with growth</div>
-      <div class="feature">💸 Earn real rewards</div>
-      <div class="feature">💼 Discover jobs + unlock XP</div>
-    </div>
-  </section>
-
-  <section id="waitlist">
-    <h2>📝 Join the Waitlist</h2>
-    <p>Be the first to access CtrlYou and start your journey.</p>
+  <div class="form-container" id="waitlist">
     <iframe src="https://forms.gle/aooa2MEoewWpY5cQ8" allowfullscreen></iframe>
-  </section>
+  </div>
 
   <footer>
-    &copy; 2025 CtrlYou. All rights reserved.
+    © 2025 CtrlYou. Built for the bold.
   </footer>
 </body>
 </html>
